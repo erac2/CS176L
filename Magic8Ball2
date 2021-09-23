@@ -1,0 +1,51 @@
+
+public class Magic8Ball2 {
+	// Data (attributes or fields):
+	private String[] answers = new String[20];
+	// or: private String [] answers = new String[20]
+
+	// Constructor(s):
+	// no-argument (default) constructor:
+	public Magic8Ball2() {}
+		// Don't do this: String [] answers = new String[20];
+	//	private void Answers()
+	{
+		answers = new String[] // contains 20 nulls
+			
+		{"It is certain",
+		"It is decidedly so",
+		"Without a doubt",
+		"Yes definitely",
+		"You may rely on it",
+		 "As I see it yes",
+		 "Most likely",
+		 "Outlook good",
+		"Yes",
+		"Signs point to yes",
+		"Reply hazy try again",
+		"Ask again later",
+		"Better not tell you now",
+		"Cannot predict now",
+		"Concentrate and ask again",
+		"Don't count on it",
+		"My reply is no",
+		"My sources say no",
+		"Outlook not so good",
+		"Very doubtful"};
+	}
+	// end constructor
+	
+	public void listAnswers() 
+	{
+		for (int i = 0; i < answers.length; i++)
+		{
+		System.out.println(answers[i]);
+		}
+	}
+	public String getAnswer()
+		{
+		int answerIndex = (int)(Math.random() * 20);
+		return answers[answerIndex];
+		}
+
+}
