@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class TestMagicEightBall2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner in = new Scanner(System.in);
+		Magic8Ball2 ball = new Magic8Ball2();
+		
+		System.out.println("Enter any Yes/No question (or \"exit\" to quit  \"list\" to print out the list):" );
+		while (in.hasNextLine())
+		{
+			String question = in.nextLine();
+			if (question.equals("exit"))
+			{
+				break;
+			}
+			if (question.equals("list"))
+			{
+				ball.listAnswers();
+			} 
+			System.out.println();
+
+			System.out.print("The answer is: " + ball.getAnswer());
+
+			System.out.println();
+			System.out.println("Enter any yes/no question (or \"exit\" to quit):" );
+		}
+	}
+
+	}
