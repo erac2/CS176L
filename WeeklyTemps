@@ -1,0 +1,85 @@
+package lab2.prob1;
+
+public class WeeklyTemps {
+
+	//Data:
+	//private double [] weeklyTemps = new double[7];
+	private double [] weeklyTemps;
+
+	//Default constructor:
+	public WeeklyTemps() {
+		weeklyTemps = new double[7];
+
+		double [] temps = { 78.4, 68.1, 80, 85, 82.9, 79.8, 60 };
+
+		weeklyTemps = temps;
+
+	}
+
+
+	//Methods:
+	/**
+	 * Get the max temperature for the week.
+	 */
+	public double getMax()
+	{
+		double maxTemp = weeklyTemps[0];
+		for (int i = 1; i < weeklyTemps.length; i++)
+		{
+			if (weeklyTemps[i] > maxTemp)
+			{
+				maxTemp = weeklyTemps[i];
+			}
+		}
+		return maxTemp;
+	}
+	/**
+	 * Get the min temperature for the week
+	 */
+	public double getMin()
+	{
+		double minTemp = weeklyTemps[0];
+		for (int i = 1; i < weeklyTemps.length; i++)
+		{
+			if (weeklyTemps[i] < minTemp)
+			{
+				minTemp = weeklyTemps[i];
+			}
+		}
+		return minTemp;
+	}
+
+
+	/**
+	 * Return the range of temperatures (min to max) as a String
+	 */
+
+	public String getRange()
+	{
+		String getRange;
+		getRange = System.out.println(minTemp + " - " + maxTemp);
+		return getRange;
+	}
+	
+	/**
+	 * Return the mean of Temperature
+	 */
+	
+	public double getMean()
+	{
+		double total = 0;
+		double getMean = weeklyTemps[0];
+		for (int i = 1; i < weeklyTemps.length; i++)
+		{
+			 total = weeklyTemps[i] + getMean;
+			total = getMean;
+		}
+		getMean = total / weeklyTemps.length;
+		return getMean;
+	}
+
+	/**
+	 * Return the number of extreme temperature days.
+	 */
+	
+}
