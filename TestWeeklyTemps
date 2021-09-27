@@ -1,0 +1,17 @@
+package lab2.prob1;
+
+public class TestWeeklyTemps {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		WeeklyTemps lastWeek = new WeeklyTemps();
+		
+		//print the mean temperature of lastWeek.
+		
+		//print the range of temperatures of lastWeek.
+		
+		//print the number of extreme temperature days of lastWeek.
+	}
+
+}
