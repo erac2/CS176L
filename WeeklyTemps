@@ -57,8 +57,8 @@ public class WeeklyTemps {
 	public String getRange()
 	{
 		String getRange;
-		getRange = System.out.println(minTemp + " - " + maxTemp);
-		return getRange;
+		//getRange = getMin + " - " maxTemp;
+		return getMin() + " - " + getMax();
 	}
 	
 	/**
@@ -81,5 +81,20 @@ public class WeeklyTemps {
 	/**
 	 * Return the number of extreme temperature days.
 	 */
-	
+	public double getExtreme()
+	{
+		int i;
+		for(i=0; i < weeklyTemps.length;i++)
+		{
+			if(weeklyTemps[i]>=95)
+			{
+				System.out.println(weeklyTemps[i] + " is an extreme temperature for " + i + " day(s).");
+			}
+			if(weeklyTemps[i]<=5)
+			{
+				System.out.println(weeklyTemps[i] + " is an extreme temperature " + i + " day(s).");
+			}
+	}
+		return i;
+}
 }
