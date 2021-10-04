@@ -1,0 +1,104 @@
+/**
+ * @author s1239605
+ */
+package lab3.prob1;
+
+public class TheaterSeating {
+
+	// Data:
+	private final int ROWS = 9;
+	private final int COLS = 10;
+	private int[][] seats = new int[ROWS][COLS];
+
+	// Constructor:
+	public TheaterSeating() {
+		int[][] seatPrices = { 
+				{ 30, 40, 50, 50, 50, 50, 50, 50, 40, 30 }, 
+				{ 20, 30, 30, 30, 40, 50, 40, 30, 30, 20 },
+				{ 20, 20, 30, 30, 40, 40, 30, 30, 20, 20 }, 
+				{ 10, 10, 20, 20, 20, 20, 20, 20, 10, 10 },
+				{ 10, 10, 20, 20, 20, 20, 20, 20, 10, 10 }, 
+				{ 10, 10, 20, 20, 20, 20, 20, 20, 10, 10 },
+				{ 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 }, 
+				{ 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 },
+				{ 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 } 
+		};
+
+		for (int i = 0; i < ROWS; i++) {
+			for (int j = 0; j < COLS; j++) {
+				seats[i][j] = seatPrices[i][j];
+			}
+		}
+	} //end constructor
+
+	//Methods:
+	/**
+	 * Display seating chart.
+	 * @TODO: At end of row 1, display "(row 1)".
+	 * 		  At end of row 9, display "(row 9)". 
+	 * 		  For seats with price 0, i.e., sold out 
+	 */
+	public void showSeats() {
+		System.out.println("\t(front seats)");
+
+		for (int i = 0; i < ROWS; i++) {
+			for (int j = 0; j < COLS; j++) {
+				System.out.print(seats[i][j] + " ");
+			}
+			//End of row, so print a newline:
+			System.out.println();
+		}
+		System.out.println("\t(back seats)");
+	}
+	
+	/**
+	 * Buy seat by row, col. 
+	 * Return a flag that indicates successful or unsuccessful purchase.
+	 * If successful purchase, return the price of the purchased seat and set price of purchased seat to 0.
+	 * If unsuccessful, return 0.
+	 * @param args
+	 * @param col
+	 * @return price of purchased seat or 9 (if seat not available)
+	 */
+	
+	public int buySeatRowCol(int row, int col) {
+		if(seats[row][col] != 0) { // the seat is not available
+			int seatPrice = seats[row][col];
+			seats[row][col] = 0; // seat sold
+			return seatPrice;
+		}
+		else { // the sat is not available
+			return 0;
+		}
+		
+	}
+	
+	
+	/**
+	 * Buy seat by price.
+	 * Return a flag that indicates successful or unsuccessful purchase.
+	 * If successful purchase, return number of purchased seat.
+	 * @param args
+	 * @return number of purchased seats
+	 */
+	
+	public int buySeatByPrice(int price)
+	{
+		int seatNumber = 0;
+		for (int i = 0; i < ROWS; i++) {
+			for (int j = 0; j < COLS; j++) {
+				// Search through all seats for first available seat at desired price.
+				// If seat found, return seat number (absolute).
+				seatNumber++; 
+			}
+		}
+		return seatNumber; // if 0, then no seats are available at desired place
+	}
+	
+	
+	public static void main(String[] args) {
+		TheaterSeating theVic = new TheaterSeating();
+		theVic.showSeats();
+	}
+
+}
