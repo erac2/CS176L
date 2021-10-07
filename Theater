@@ -3,6 +3,8 @@
  */
 package lab3.prob1;
 
+import java.util.Scanner;
+
 public class TheaterSeating {
 
 	// Data:
@@ -43,6 +45,10 @@ public class TheaterSeating {
 
 		for (int i = 0; i < ROWS; i++) {
 			for (int j = 0; j < COLS; j++) {
+				if(seats[i][j] == 0)
+				{
+					System.out.println(" ");
+				}
 				System.out.print(seats[i][j] + " ");
 			}
 			//End of row, so print a newline:
@@ -62,6 +68,10 @@ public class TheaterSeating {
 	 */
 	
 	public int buySeatRowCol(int row, int col) {
+		//normalize row, col to array
+		row = row-1;
+		col = col-1;
+		
 		if(seats[row][col] != 0) { // the seat is not available
 			int seatPrice = seats[row][col];
 			seats[row][col] = 0; // seat sold
@@ -92,6 +102,7 @@ public class TheaterSeating {
 				seatNumber++; 
 			}
 		}
+		seatNumber = 0;
 		return seatNumber; // if 0, then no seats are available at desired place
 	}
 	
@@ -99,6 +110,56 @@ public class TheaterSeating {
 	public static void main(String[] args) {
 		TheaterSeating theVic = new TheaterSeating();
 		theVic.showSeats();
+		
+		//buy a seat by row, col.
+	//	System.out.println(theVic.buySeatRowCol(1,1));
+	//	theVic.showSeats();
+		
+		//buy a seat by price
+	//	System.out.println(theVic.buySeatByPrice());	
+		theVic.showSeats();
+		
+		Scanner in = new Scanner(System.in);
+		
+		boolean yN =true;
+		while(yN == true){
+		System.out.println("Choose seat by location or price? (1 = location, 2 = price, 0 = quit)");
+		int location = in.nextInt();
+		if(location == 1)
+		{
+			System.out.println("Enter the row of your desired seat: ");
+			int row = in.nextInt();
+			System.out.println("Enter the column of your desired seat: ");
+			int column = in.nextInt();
+			System.out.println(theVic.buySeatRowCol(row, column));
+			if(theVic.buySeatRowCol(row, column) == 0)
+			{
+			System.out.println("Sorry, that seat is taken.");
+			}
+			else
+			{
+			System.out.println("That seat is available, and you have purchased it for $20.");
+			theVic.showSeats();
+			}
+		if(location == 2)
+		{
+			System.out.println("Enter the price of your desired seat: ");
+			int price = in.nextInt();
+			System.out.println(theVic.buySeatByPrice(price));
+			if(theVic.buySeatByPrice(price) == 0)
+			{
+			System.out.println("Sorry, no seats of that price are available.");
+			}
+			else
+			{
+				
+			}
+		}
+		if(location == 0)
+		{
+			break;
+		}
 	}
 
 }
+	}}
