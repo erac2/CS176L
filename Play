@@ -1,0 +1,50 @@
+package lab5.prob1;
+
+/**
+ * Your name:
+ * 
+ * Construct 52 PlayingCards and add them to a deck.
+ * 
+ * **NOTE**: Read all comments below thoroughly.
+ */
+
+public class TestPlayingCard
+{
+    public static void main(String[] args)
+    {
+        // 1 - Construct an array of 52 PlayingCard objects called deck.
+    	PlayingCard [] deck = new PlayingCard[52]; //currently contains only 52 nulls
+
+        // 2 - Construct the 52 PlayingCards in a standard deck of cards
+        //     (https://en.wikipedia.org/wiki/Standard_52-card_deck)
+        //     and add them to the deck. You must use a loop (or
+        //     nested loops).
+    	int counter = 0;
+    	for (int values = 1; values <= 13; values++)
+    	{
+    		for (int suit = 1; suit <=4; suit++)
+    		{
+    			//total repetitions = 52, to construct 52 unique cards
+    			//after constructing each card, add it to deck
+    			PlayingCard card = new PlayingCard(values, suit);
+    			deck[counter] = card;
+    			//Complete PlayingCard class, then this code.
+    		    counter++;
+    		}
+    	}
+        
+
+
+
+        // 3 - Display the value and suit of every PlayingCard in the deck.
+        //     You must use a loop.
+        for (PlayingCard card : deck)
+        {
+        	System.out.println(card); //call card object's toString() implicitly
+        }
+        
+
+        
+
+    }
+}
