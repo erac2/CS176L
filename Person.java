@@ -1,21 +1,28 @@
 /**
  * Define the Person superclass.
+
  * @author linuxuser
  *
  */
-
+package lab6.persons;
+import java.lang.Object.getClass;
 public class Person {
+	
 	// data
+	
+	public Person()
+	{
+		
+	}
 	private String name;
 	
 	// methods
 	/**
 	 * set Person's name
 	 */
-	public void setName(String name) 
-	
+	public String setName(String name) 
 	{
-		this.name = name;
+		return this.name = name;
 	}
 
 	/**
@@ -24,9 +31,7 @@ public class Person {
 	
 	public String toString()
 	{
-		
-		String class1= Person.class;
-		return name;
+		return java.lang.Object.getClass() + name;
 	}
 	
 	
