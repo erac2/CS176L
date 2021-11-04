@@ -18,4 +18,9 @@ public class Employee extends Person{
 	{
 		return this.salary = salary;
 	}
+	
+	public String toString()
+	{
+		return super.toString() + "\nOffice Number: " + officeNumb + "\nSalary: " + salary;
+	}
 }

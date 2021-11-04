@@ -12,4 +12,9 @@ public class Staff extends Employee{
 	{
 		return this.title = title;
 	}
+	
+	public String toString()
+	{
+		return super.toString() + "\nTitle: " + title;
+	}
 }

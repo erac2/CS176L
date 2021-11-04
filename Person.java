@@ -5,7 +5,6 @@
  *
  */
 package lab6.persons;
-import java.lang.Object.getClass;
 public class Person {
 	
 	// data
@@ -31,7 +30,7 @@ public class Person {
 	
 	public String toString()
 	{
-		return java.lang.Object.getClass() + name;
+		return this.getClass() + "\nName: " + name;
 	}
 	
 	

@@ -9,40 +9,38 @@ public class Student extends Person{
 	public static final int SUPERSENIOR = 5;
 
 	private int year;
-	private String name;
 
-	public Student()
+	public void setYear(int year)
 	{
-		super.setName(name);
-	}
-
-	public int setYear(int year)
-	{
-		if (year == 1)
+		if (year == FRESHMAN)
 		{
-			return FRESHMAN;
+			this.year = 1;
 		}
-		else if(year == 2)
+		else if(year == SOPHOMORE)
 		{
-			return SOPHOMORE;
+			this.year = 2;
 		}
-		else if(year == 3)
+		else if(year == JUNIOR)
 		{
-			return JUNIOR;
+			this.year = 3;
 		}
-		else if(year == 4)
+		else if(year == SENIOR)
 		{
-			return SENIOR;
+			this.year = 4;
 		}
-		else if(year == 5)
+		else if(year == SUPERSENIOR)
 		{
-			return SUPERSENIOR;
+			this.year = 5;
 		}
 		else
 		{
 			System.out.println("Invalid!");
 		}
-		return year;
+	}
+	
+	public String toString()
+	{
+		return super.toString() + "\nYear: " + year;
 	}
 
 }
