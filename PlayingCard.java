@@ -1,5 +1,4 @@
-package lab5.prob1;
-
+package lab7.poker;
 /**
  *  Your name:
  *  
@@ -140,7 +139,19 @@ public class PlayingCard
 	 * Return PlayingCard's _value and _suit as a String
 	 * @return PlayingCard as "_value of _suit"
 	 */
-
+	
+	public int getValue()
+	{
+		return _value;
+	}
+	
+	/*
+	 * Get method for suit.
+	 */ 
+	public String getSuit()
+	{
+		return _suit;
+	}
 
 
 
