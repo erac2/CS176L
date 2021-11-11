@@ -11,14 +11,15 @@ public class PlayPoker {
 		for (int i = 0; i<5;i++)
 		{
 			hand[i] = game.draw();
-		}
-		int i = 0;
-		int check = 0;
-		for (i=0; i>5; i++)
-		{
 			System.out.println(hand[i]);
 		}
 		
+		int i = 0;
+		int check = 0;
+		
+		
+		System.out.println();
+
 		System.out.println(game.getPairs(hand));
 	} //Rest of code: See sample output in lab doc.
 }

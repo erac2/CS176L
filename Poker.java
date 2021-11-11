@@ -1,4 +1,5 @@
 package lab7.poker;
+import java.util.Arrays;
 
 /**
  * Your name:
@@ -10,6 +11,7 @@ package lab7.poker;
 public class Poker extends CardGame
 {
 
+	private int pair;
 	// Constructor(s):	
 	public Poker()
 	{
@@ -32,28 +34,39 @@ public class Poker extends CardGame
 
 	public int getPairs(PlayingCard [] hand)
 	{
-		int i = 0;
-		int check = 0;
-		/*for (i=0; i>5; i++)
-		{
-			System.out.println(hand[i]);
-		}*/
+		int [] handValues = new int[5];
 		
-		for(i = 0; i>5; i++)
+		handValues[0] = hand[0].getValue();
+		handValues[1] = hand[1].getValue();
+		handValues[2] = hand[2].getValue();
+		handValues[3] = hand[3].getValue();
+		handValues[4] = hand[4].getValue();
+
+		Arrays.sort(handValues);
+		
+		int i;
+		
+		if(handValues[0] == handValues[1])
 		{
-			if(hand[i].getValue() == hand[check].getValue())
-			{
-				check++;
-			}
-		if (check == 1)
-		{
-			return 1;
+			pair++;
 		}
+		if(handValues[1] == handValues[2])
+		{
+			pair++;
+		}
+		if(handValues[2] == handValues[3])
+		{
+			pair++;
+		}
+		if(handValues[3] == handValues[4])
+		{
+			pair++;
+		}
+
 	
 	///	return check;
-		}
 	
-		return check; // dummy val		
+		return pair; // dummy val		
 	} // end getPair()
 
 
