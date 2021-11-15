@@ -1,0 +1,20 @@
+package lab7.writtenworks;
+
+public class TestWrittenWork {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Novel book = new Novel("Don't Read This", "Bob", 1969, "Fiction", 10);
+		System.out.println(book);
+		ShortStory book2 = new ShortStory("Don't Read This Vol 2", "Phil", 2021, "Fiction", 13, true);
+		System.out.println(book2);
+	
+			
+				
+		
+		
+
+	}
+
+}
