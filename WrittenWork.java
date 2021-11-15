@@ -1,55 +1,57 @@
-package lab6.writtenworks;
-
-//WrittenWork.java: Superclass
+package lab7.writtenworks;
 
 public class WrittenWork {
+	
 
- private String title;
- private String author;
- private int    year;
-
-
- // constructors:
- public WrittenWork(String title, String author, int year) {
-
-     setTitle( title );
-     setAuthor( author );
-     setYear( year );
- }
-
- public WrittenWork() {
- }
+	    private String title;
+	    private String author;
+	    private int year;
 
 
- // accessor methods:
- public String getTitle() {
-     return title;
- }
+	    // constructors:
+	    public WrittenWork(String title, String author, int year) {
 
- public String getAuthor() {
-     return author;
- }
+	        setTitle( title );
+	        setAuthor( author );
+	        setYear( year );
+	    }
 
- public int getyear() {
-     return year;
- }
+	    public WrittenWork() {
+	    }
 
- public void setTitle(String title) {
-     this.title = title;
- }
 
- public void setAuthor(String author) {
-     this.author = author;
- }
+	    // accessor methods:
+	    public String getTitle() {
+	        return title;
+	    }
 
- public void setYear(int year)
- {
-     this.year = year;
- }
- 
- public String toString()
- {
-	 
- }
-} // end class
+	    public String getAuthor() {
+	        return author;
+	    }
+
+	    public int getyear() {
+	        return year;
+	    }
+
+	    public void setTitle(String title) {
+	        this.title = title;
+	    }
+
+	    public void setAuthor(String author) {
+	        this.author = author;
+	    }
+
+	    public void setYear(int year)
+	    {
+	        this.year = year;
+	    }
+	    public String toString()
+	    {
+	    	return "Title: "+title+","+" Author: "+author+","+" Year: "+year+",";
+	    	
+	    }
+
+	} // end class
+
+
 
