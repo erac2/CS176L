@@ -35,7 +35,7 @@ public class Poker extends CardGame
 	public int getPairs(PlayingCard [] hand)
 	{
 		int [] handValues = new int[5];
-		
+
 		handValues[0] = hand[0].getValue();
 		handValues[1] = hand[1].getValue();
 		handValues[2] = hand[2].getValue();
@@ -43,9 +43,9 @@ public class Poker extends CardGame
 		handValues[4] = hand[4].getValue();
 
 		Arrays.sort(handValues);
-		
+
 		int i;
-		
+
 		if(handValues[0] == handValues[1])
 		{
 			pair++;
@@ -63,9 +63,6 @@ public class Poker extends CardGame
 			pair++;
 		}
 
-	
-	///	return check;
-	
 		return pair; // dummy val		
 	} // end getPair()
 
@@ -77,8 +74,30 @@ public class Poker extends CardGame
 	 * @return three of a kind, true or false 
 	 */
 	public boolean hasThreeOfAKind(PlayingCard [] hand)
-	{    	
+	{   
+		int [] handValues = new int[5];
 
+		handValues[0] = hand[0].getValue();
+		handValues[1] = hand[1].getValue();
+		handValues[2] = hand[2].getValue();
+		handValues[3] = hand[3].getValue();
+		handValues[4] = hand[4].getValue();
+
+		Arrays.sort(handValues);
+
+		if(handValues[0] == handValues[1] && handValues[1] == handValues[2])
+		{
+			return true;
+		}
+		if(handValues[1] == handValues[2] && handValues[2] == handValues[3])
+		{
+			return true;
+		}
+		if(handValues[2] == handValues[3] && handValues[3] == handValues[4])
+		{
+			return true;
+		}
+		
 		return false; // dummy val
 	} // end hasThreeOfAKind
 
@@ -153,4 +172,3 @@ public class Poker extends CardGame
 
 
 } // end class
-

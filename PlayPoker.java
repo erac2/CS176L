@@ -19,7 +19,21 @@ public class PlayPoker {
 		
 		
 		System.out.println();
-
-		System.out.println(game.getPairs(hand));
-	} //Rest of code: See sample output in lab doc.
+		int pair = game.getPairs(hand);
+		
+		if (pair>1)
+		{
+			System.out.println("You have " + game.getPairs(hand) + "pairs.");
+		}
+		else if (pair<=1)
+		{
+			System.out.println("You have " + game.getPairs(hand) + " pair.");
+		}
+		else if(game.hasThreeOfAKind(hand) == true)
+		{
+			System.out.println("You have three of a kind.");
+		} 
+		
+		//Rest of code: See sample output in lab doc.
+}
 }
