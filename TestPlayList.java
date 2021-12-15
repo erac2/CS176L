@@ -9,6 +9,7 @@ public class TestPlayList {
 	public static void main( String[] args ) {
 
 		PlayList mySongs = new PlayList( "My songs" );
+		Song collection = new Song();
 
 		// COMPLETE THIS CODE:
 		// Construct at least 3 Songs and add them to the mySongs PlayList.
@@ -30,33 +31,55 @@ public class TestPlayList {
 
 		// COMPLETE THIS CODE:
 		// Shuffle the Songs in mySongs and then list them all again.
-
+	
+		System.out.println("Shuffling songs... ");
 		mySongs.shuffleSongs();
 		mySongs.listSongs();
+		System.out.println();
 
 
 		// COMPLETE THIS CODE:
 		// Use the static Song.setSortBy() method to make Songs sortable by name.
 		// Sort the Songs in mySongs, then list them all again. 
 
+		System.out.println("Sorting songs by name... ");
+		Song.setSortBy("name");
+		mySongs.sortSongs();
+		mySongs.listSongs();
+		System.out.println();
 
 
 		// COMPLETE THIS CODE:
 		// Use the static Song.setSortBy() method to make Songs sortable by artist.
 		// Sort the Songs in mySongs, then list them all again. 
 
+		System.out.println("Sorting songs by artist... ");
+		Song.setSortBy("artist");
+		mySongs.sortSongs();
+		mySongs.listSongs();
+		System.out.println();
 
 
 		// COMPLETE THIS CODE:
 		// Use the static Song.setSortBy() method to make Songs sortable by album.
 		// Sort the Songs in mySongs, then list them all again. 
 
+		System.out.println("Sorting songs by album... ");
+		Song.setSortBy("album");
+		mySongs.sortSongs();
+		mySongs.listSongs();
+		System.out.println();
 
 
 		// COMPLETE THIS CODE:
 		// Use the static Song.setSortBy() method to make Songs sortable by genre.
 		// Sort the Songs in mySongs, then list them all again. 
 
+		System.out.println("Sorting songs by genre... ");
+		Song.setSortBy("genre");
+		mySongs.sortSongs();
+		mySongs.listSongs();
+		System.out.println();
 
 
 
