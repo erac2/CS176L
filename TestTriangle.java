@@ -1,27 +1,33 @@
 package lab9.interfaces;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class TestTriangle {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		Triangle triangle1 = new Triangle(2, 2, 2);
-		Triangle triangle2 = new Triangle(4, 4, 6);
-
-		triangle1.setColor("yellow");
-		triangle1.setFilled(true);
 		
-		triangle2.setColor("blue");
-		triangle2.setFilled(false);
-		
-		System.out.println(triangle1.toString());
-		System.out.println();
-		System.out.println(triangle2.toString());
-		
-		System.out.println("Triangle 1 < Triangle 2: " + triangle1.lessThan(triangle2));
-		System.out.println("Triangle 1 > Triangle 2: " + triangle1.greaterThan(triangle2));
-		System.out.println("Triangle 1 = Triangle 2: " + triangle1.equals(triangle2));
+		ArrayList<Triangle> triangles = new ArrayList<Triangle>();
 
+		Triangle tri1 = new Triangle(20, 20, 20);
+		triangles.add(tri1);
+		
+		Triangle tri2 = new Triangle(210, 210, 210);
+		triangles.add(tri1);
+		
+		Triangle tri3 = new Triangle(120, 120, 120);
+		triangles.add(tri1);
+		
+		Triangle tri4 = new Triangle(40, 40, 40);
+		triangles.add(tri1);
+		
+		Triangle tri5 = new Triangle(100, 100, 100);
+		triangles.add(tri1);
+		
+		Collections.sort(triangles);
+
+		System.out.println(triangles.toString());
 
 	}
 
