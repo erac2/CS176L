@@ -1,7 +1,7 @@
 // GeometricObject1.java: The GeometricObject1 class
 // This class is meant to be a superclass.
 
-package lab10.interfaces2;
+package lab9.interfaces;
 
 public class GeometricObject1 {
     private String color = "white";
@@ -52,4 +52,3 @@ public class GeometricObject1 {
         " and filled: " + filled;
     }
 }
-
